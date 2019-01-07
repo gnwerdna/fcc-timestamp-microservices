@@ -25,6 +25,8 @@ app.get("/api/hello", function (req, res) {
 });
 
 
+app.get("api/timestamps/:")
+
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
