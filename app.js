@@ -1,9 +1,11 @@
 var express = require("epress");
-var app = express();
 var bodyParser = require("body-parser");
+var cors = require("cors");
 
-app.get("/api/timestamps/:date_string?", 
-        (req, res) => {
-           
-  
+
+var app = express();
+app.use(bodyParser.json());
+app.use(cors());
+app.get("/api/timestamp/:date_string", (req, res, next) => {
+  var date_string = req.
 });
