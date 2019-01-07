@@ -25,7 +25,19 @@ app.get("/api/hello", function (req, res) {
 });
 
 
-app.get("api/timestamps/:")
+app.get("/api/timestamp/:date_string", (req, res) => {
+  var dateVal = req.params.date_string;
+  var dateFormattingOptions = {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  };
+  
+  if(isNaN(dateVal)) {
+    var naturalDate = new Date(D)
+  }
+  res.json({unix: unixDate, natural: naturalDate});
+});
 
 
 // listen for requests :)
